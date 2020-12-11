@@ -1,60 +1,13 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>moxian demo</title>
-  <base href="/moxian/"/>
-  <meta name="copyright" content="All Rights Reserved"/>
-  <meta name="version" content="2020"/>
-  <meta name="author" content="moxian"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link id="favicon" rel="icon" type="image/x-icon"/>
-  <script>
-    function browserCheck() {
-      function IEVersion() {
-        var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
-        var isIE = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1; // 判断是否IE<11浏览器
-        var isEdge = userAgent.indexOf('Edge') > -1 && !isIE; // 判断是否IE的Edge浏览器
-        var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
-        if (isIE) {
-          var fIEVersion = parseFloat(RegExp['$1']);
-          if (fIEVersion === 7) {
-            return 7;
-          } else if (fIEVersion === 8) {
-            return 8;
-          } else if (fIEVersion === 9) {
-            return 9;
-          } else if (fIEVersion === 10) {
-            return 10;
-          } else {
-            return 6; // IE版本<=7
-          }
-        } else if (isEdge) {
-          return 'edge'; // edge
-        } else if (isIE11) {
-          return 11; // IE11
-        } else {
-          return -1; // 不是ie浏览器
-        }
-      }
-      var ieVersion = IEVersion();
-      if (ieVersion === -1 || ieVersion === 'edge') {
-        return;
-      }
-      if (ieVersion === 11) {
-        // window.alert('您当前使用的是IE浏览器，部分功能异常，请使用最新版的chrome或firefox浏览器');
-        document.getElementsByTagName('html')[0].className = 'ie-' + ieVersion;
-        return;
-      }
-      if (IEVersion() !== -1 || ieVersion === 10) {
-        window.alert('不支持该浏览器，为保障您的用户体验，建议您使用主流浏览器。');
-        window.location = 'https://browsehappy.com/';
-      }
-    }
-    // 浏览器版本检查
-    browserCheck();
-  </script>
+  <meta charset="utf-8">
+  <title>Moxian</title>
+  <base href="/moxian/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="/moxian/styles.ce2f8a5c9aaddcfeb252.css"></head>
 <body>
   <app-root></app-root>
+<script src="/moxian/runtime-es2015.f4b7c54701f76c8c9a13.js" type="module"></script><script src="/moxian/runtime-es5.f4b7c54701f76c8c9a13.js" nomodule defer></script><script src="/moxian/polyfills-es5.dbadc41ad6bcf6566991.js" nomodule defer></script><script src="/moxian/polyfills-es2015.817fefb838c2269531ba.js" type="module"></script><script src="/moxian/main-es2015.47b7fe88be336b2aae9c.js" type="module"></script><script src="/moxian/main-es5.47b7fe88be336b2aae9c.js" nomodule defer></script></body>
 </html>
