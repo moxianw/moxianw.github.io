@@ -1,0 +1,16 @@
+<nz-layout>
+  <nz-header>
+    <app-global-header></app-global-header>
+  </nz-header>
+  <nz-layout>
+    <nz-sider *ngIf="showAside">
+      <app-global-aside></app-global-aside>
+    </nz-sider>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+  <nz-footer>
+    <app-global-footer></app-global-footer>
+  </nz-footer>
+</nz-layout>
