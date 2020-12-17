@@ -85,7 +85,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "deployUrl": "/moxain/",
+              "baseHref": "/moxain/"
             }
           }
         },
